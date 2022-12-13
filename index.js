@@ -12,7 +12,7 @@ app.use(cors())
 app.use("/user", userRouter);
 
 // app.get('/',(req,res) => res.send('hello'));
-
+mongoose.set('strictQuery', true);
 mongoose
   .connect(
     "mongodb+srv://utkarsh:1234@cluster0.p0u8dny.mongodb.net/EMI"
