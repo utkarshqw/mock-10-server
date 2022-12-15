@@ -9,7 +9,7 @@ app.get("/",async(req,res)=>{
 })
 
 
-app.delete("/delete",async(req,res)=>{
+app.post("/delete",async(req,res)=>{
     var {_id} = req.body
     var x  = await productModel.findByIdAndDelete(_id)
     res.send("deleted")
