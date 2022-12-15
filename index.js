@@ -1,7 +1,8 @@
 const express = require('express');
 const mongoose = require("mongoose")
 const cors = require("cors")
-const userRouter = require("./Router/user.router")
+const userRouter = require("./Router/user.router");
+const productRouter = require("./Router/product.router")
 
 const app = express()
 
@@ -10,6 +11,7 @@ app.use(express.json());
 app.use(cors())
 
 app.use("/user", userRouter);
+app.use("/product", productRouter )
 
 // app.get('/',(req,res) => res.send('hello'));
 mongoose.set('strictQuery', true);
