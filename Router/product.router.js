@@ -8,6 +8,13 @@ app.get("/",async(req,res)=>{
     res.send(x)
 })
 
+app.get("/book",async(req,res)=>{
+    var x = await bookmarkModel.find()
+    res.send(x)
+})
+
+
+
 
 app.post("/delete",async(req,res)=>{
     var {_id} = req.body
