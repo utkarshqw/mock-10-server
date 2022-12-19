@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const productSchema = new mongoose.Schema({
+const cameraSchema = new mongoose.Schema({
   name: { type: String },
   display_img: { type: String },
   brand: { type: String, required: true },
@@ -37,5 +37,5 @@ const productSchema = new mongoose.Schema({
   ],
 });
 
-const productModel = mongoose.model("product", productSchema);
-module.exports = productModel;
+const cameraModel = mongoose.model("camera", cameraSchema);
+module.exports = cameraModel;
