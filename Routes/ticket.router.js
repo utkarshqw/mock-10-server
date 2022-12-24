@@ -14,6 +14,11 @@ app.post("/alltickets",async(req,res)=>{
     res.send(tickets)
 
 })
+app.post("/category",async(req,res)=>{
+    var {category,email} = req.body
+    var tickets = await ticketModel.find({email,category})
+    res.send(tickets)
+})
 
 
 
